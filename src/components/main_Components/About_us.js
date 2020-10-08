@@ -18,7 +18,7 @@ class About_us extends React.Component  {
 
 
   <h1 className="display-3"> Thank you for Visiting in Our MVP</h1>
-        <p>Our Job at Events Geeks is to provide you all the event in the stock market that you nedd to know of!
+        <p className="lead">Our Job at Events Geeks is to provide you all the event in the stock market that you nedd to know of!
           <br/>
           IPO's, Earnings Dates, Dividents, Confrence lcals, Merges and Splits and Alot More.
           <br/>
