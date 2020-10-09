@@ -24,10 +24,9 @@ class Header extends React.Component  {
         Stock Market Events
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link ><Link to="">Home</Link></Nav.Link>
-        <Nav.Link ><Link to="">News</Link></Nav.Link>
-        <Nav.Link ><Link to="">About Us</Link></Nav.Link>
-
+        <Nav.Link ><Link to="/">Home</Link></Nav.Link>
+        <Nav.Link ><Link to="/news">News</Link></Nav.Link>
+        <Nav.Link ><Link to="/aboutus">About Us</Link></Nav.Link>
       </Nav>
     </Navbar>
     </div>

@@ -48,10 +48,10 @@ class Main_Frame extends React.Component  {
     const selectedService = this.state.selectedService;
 
     return (
-      <Jumbotron >
-        <Header/>
-        <News></News>
-        {/* Add here the main services that we offer*/}
+      <Jumbotron >        
+        
+        
+        {/* Add here the main services that we offer
         { this.state.isInMainServices ? 
         <Our_Services ourServices={this.state.ourServices} selectService={this.userSelectedService}></Our_Services>
         : null }
@@ -61,7 +61,9 @@ class Main_Frame extends React.Component  {
           <IPOS current={selectedService}/> : <Earnings current={selectedService} /> )
          : null
         }
+*/}
 
+      <Our_Services ourServices={this.state.ourServices} selectService={this.userSelectedService}></Our_Services>
 
       </Jumbotron>
   );
