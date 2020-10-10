@@ -11,6 +11,7 @@ class Service extends React.Component  {
 
   moveToServiceByClick() {
     /* when Clicking on the Service, We will return the Name of the Service Selected */
+    console.log(this.props.service.serviceName);
     this.props.selectService(this.props.service.serviceName);
   }
 

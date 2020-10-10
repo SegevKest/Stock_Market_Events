@@ -7,7 +7,7 @@ import IPOS from '../main_Components/IPOS';
 import Earnings from '../main_Components/Earnings';
 import News from './News';
 import API_Controller from '../Controllers/API_Controller';
-
+import { Redirect, Link} from 'react-router-dom';
 
 class Main_Frame extends React.Component  {
 
@@ -36,12 +36,10 @@ class Main_Frame extends React.Component  {
 
   userSelectedService(serviceName)
   {
+    /* Chaingng the State for redirection to the necessary route*/ 
     this.setState( { isInMainServices:false, selectedService:serviceName });
   }
 
-  componentDidMount(){
-
-  }
 
 
   render() {
@@ -49,22 +47,13 @@ class Main_Frame extends React.Component  {
 
     return (
       <Jumbotron >        
-        
-        
-        {/* Add here the main services that we offer
+        {/* Add here the main services that we offer*/ }
+
         { this.state.isInMainServices ? 
         <Our_Services ourServices={this.state.ourServices} selectService={this.userSelectedService}></Our_Services>
-        : null }
-
-        { !this.state.isInMainServices  ?  
-          ( selectedService == 'IPOs' ? 
-          <IPOS current={selectedService}/> : <Earnings current={selectedService} /> )
-         : null
-        }
-*/}
-
-      <Our_Services ourServices={this.state.ourServices} selectService={this.userSelectedService}></Our_Services>
-
+        :  
+        <Redirect to={'/services/'+selectedService}/>
+      }
       </Jumbotron>
   );
   }

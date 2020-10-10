@@ -14,7 +14,7 @@ class IPOS extends React.Component  {
   render() {
     return (
 <CardColumns>
- <Company_Ent current={this.props.current}/>
+     <Company_Ent current={this.props.current}/>
   </CardColumns>
 
   );
