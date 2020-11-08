@@ -18,7 +18,7 @@ const initialLocalState = {
 
 const stockEventsReducer = (state = initialLocalState , action) => {
 
-        let newState, dataFromLocalStorage;
+        let newState;
         newState = Object.assign({}, state);
 
         switch (action.type) {
