@@ -30,12 +30,19 @@ Yahoo Finance API - for articles
      let preferedServiceName = 'earnings';
     let full_APIUrl = benzinga_API_Link+preferedServiceName+benzinga_API_Key;
 
-    fetch(full_APIUrl, {
-      headers: benzinga_API_Headers    
-    })
-    .then(response=>response.json())
-    .then(earningsFromAPI =>console.log(earningsFromAPI))
-    .catch( errorApi=> console.log(errorApi));
+    try {
+          fetch(full_APIUrl, {
+            headers: benzinga_API_Headers    
+          })
+          .then(response=>response.json())
+          .then(earningsFromAPI =>console.log(earningsFromAPI))
+          .catch( errorApi=> console.log(errorApi));
+    
+        }
+    catch (error) {
+          console.log("Error");
+        }
+
 
 
   }
