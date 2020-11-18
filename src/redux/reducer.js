@@ -5,6 +5,7 @@ const initialLocalState = {
                                 allNews:[],
                                 iPos:[],
                                 earinings:[],
+                                isLoading: false,
                                 user:
                                 {
                                         firstName:'',
@@ -19,7 +20,7 @@ const initialLocalState = {
 const stockEventsReducer = (state = initialLocalState , action) => {
 
         let newState;
-        newState = Object.assign({}, state);
+        newState = {...state};
 
         switch (action.type) {
 
